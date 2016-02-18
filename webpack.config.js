@@ -1,7 +1,6 @@
 var path = require('path')
-var webpack = require('webpack')
 
-module.exports = function (options) {
+module.exports = function () {
   return {
     entry: {
       app: path.resolve('src/main.js')

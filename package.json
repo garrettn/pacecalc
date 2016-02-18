@@ -5,6 +5,7 @@
   "main": "src/main.js",
   "scripts": {
     "build": "webpack",
+    "lint": "standard --verbose | snazzy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -14,6 +15,8 @@
   "author": "Garrett Nay <garrettnay@ymail.com>",
   "license": "GPL-3.0",
   "devDependencies": {
+    "snazzy": "^3.0.0",
+    "standard": "^6.0.5",
     "webpack": "^2.0.7-beta"
   }
 }
