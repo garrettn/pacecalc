@@ -4,10 +4,11 @@
   "description": "A web app for calculating your running pace",
   "main": "src/main.js",
   "scripts": {
-    "build": "npm run clean && webpack",
+    "build": "npm run lint && npm run clean && npm run compile",
     "clean": "rm -rf dist",
+    "compile": "webpack -p",
     "lint": "standard --verbose | snazzy",
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server -d",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
