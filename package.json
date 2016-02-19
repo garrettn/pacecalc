@@ -18,6 +18,9 @@
   "author": "Garrett Nay <garrettnay@ymail.com>",
   "license": "GPL-3.0",
   "devDependencies": {
+    "babel-core": "^6.5.2",
+    "babel-loader": "^6.2.3",
+    "babel-preset-es2015-webpack": "^6.3.14",
     "html-webpack-plugin": "ampedandwired/html-webpack-plugin#feature/webpack-2",
     "html-webpack-template": "^4.0.0",
     "snazzy": "^3.0.0",

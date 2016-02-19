@@ -12,6 +12,16 @@ module.exports = function () {
       path: path.resolve('dist')
     },
 
+    module: {
+      loaders: [
+        {
+          test: /\.jsx?$/,
+          exclude: /node_modules/,
+          loader: 'babel'
+        }
+      ]
+    },
+
     plugins: [
       new HtmlWebpackPlugin({
         inject: false,
