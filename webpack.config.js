@@ -4,12 +4,23 @@ var path = require('path')
 module.exports = function () {
   return {
     entry: {
-      app: path.resolve('src/main.js')
+      app: path.resolve('src/main.js'),
+      vendor: [
+        'react',
+        'react-dom'
+      ]
     },
 
     output: {
       filename: '[name].[hash].js',
       path: path.resolve('dist')
+    },
+
+    resolve: {
+      modules: [
+        path.resolve('src'),
+        'node_modules'
+      ]
     },
 
     module: {

@@ -21,11 +21,16 @@
     "babel-core": "^6.5.2",
     "babel-loader": "^6.2.3",
     "babel-preset-es2015-webpack": "^6.3.14",
+    "babel-preset-react": "^6.5.0",
     "html-webpack-plugin": "ampedandwired/html-webpack-plugin#feature/webpack-2",
     "html-webpack-template": "^4.0.0",
     "snazzy": "^3.0.0",
     "standard": "^6.0.5",
     "webpack": "^2.0.7-beta",
     "webpack-dev-server": "^2.0.0-beta"
+  },
+  "dependencies": {
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7"
   }
 }
