@@ -32,7 +32,9 @@ function createWebpackConfig () {
       app: path.resolve('src/main.js'),
       vendor: [
         'react',
-        'react-dom'
+        'react-dom',
+        'react-redux',
+        'redux'
       ]
     },
 
