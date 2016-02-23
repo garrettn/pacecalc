@@ -1,7 +1,32 @@
-var HtmlWebpackPlugin = require('html-webpack-plugin')
+var HtmlPlugin = require('html-webpack-plugin')
 var path = require('path')
+var webpack = require('webpack')
 
-module.exports = function () {
+function getPlugins (production) {
+  var basePlugins = [
+    new HtmlPlugin({
+      inject: false,
+      template: 'node_modules/html-webpack-template/index.ejs',
+      appMountId: 'pacecalc',
+      title: 'Pacecalc'
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      names: ['vendor']
+    })
+  ]
+
+  return production
+    ? basePlugins.concat([
+      new webpack.optimize.OccurrenceOrderPlugin(),
+      new webpack.optimize.DedupePlugin(),
+      new webpack.optimize.UglifyJsPlugin()
+    ])
+    : basePlugins
+}
+
+function createWebpackConfig () {
+  var production = process.env.NODE_ENV === 'production'
+
   return {
     entry: {
       app: path.resolve('src/main.js'),
@@ -13,7 +38,8 @@ module.exports = function () {
 
     output: {
       filename: '[name].[hash].js',
-      path: path.resolve('dist')
+      path: path.resolve('dist'),
+      pathinfo: !production
     },
 
     resolve: {
@@ -33,13 +59,11 @@ module.exports = function () {
       ]
     },
 
-    plugins: [
-      new HtmlWebpackPlugin({
-        inject: false,
-        template: 'node_modules/html-webpack-template/index.ejs',
-        appMountId: 'pacecalc',
-        title: 'Pacecalc'
-      })
-    ]
+    plugins: getPlugins(production),
+
+    debug: !production,
+    devtool: production ? null : 'eval-cheap-module-source-map'
   }
 }
+
+module.exports = createWebpackConfig
