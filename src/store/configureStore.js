@@ -1,4 +1,5 @@
-import { createStore } from 'redux'
-import rootReducer from 'store/reducers/root'
-
-export default createStore(rootReducer)
+if (__DEV__) {
+  module.exports = require('./configureStore.dev').default
+} else {
+  module.exports = require('./configureStore.prod').default
+}

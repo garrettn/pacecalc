@@ -4,6 +4,9 @@ var webpack = require('webpack')
 
 function getPlugins (production) {
   var basePlugins = [
+    new webpack.DefinePlugin({
+      __DEV__: !production
+    }),
     new HtmlPlugin({
       inject: false,
       template: 'node_modules/html-webpack-template/index.ejs',
