@@ -16,7 +16,7 @@
     "url": "https://github.com/garrettn/pacecalc.git"
   },
   "author": "Garrett Nay <garrettnay@ymail.com>",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.5.2",
     "babel-loader": "^6.2.3",
