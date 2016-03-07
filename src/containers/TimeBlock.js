@@ -1,14 +1,30 @@
-import React from 'react'
+import { connect } from 'react-redux'
 import SetTime from 'components/SetTime/SetTime'
+import { selectTime } from 'store/selectors'
+import {
+  setTimeHours,
+  setTimeMinutes,
+  setTimeSeconds
+} from 'store/actions/time'
 
-function TimeBlock () {
-  return (
-    <SetTime
-      time={{hours: 0, minutes: 30, seconds: 0}}
-      onHoursChange={() => true}
-      onMinutesChange={() => true}
-      onSecondsChange={() => true} />
-  )
+function mapStateToProps (state) {
+  return {
+    time: selectTime(state)
+  }
 }
 
-export default TimeBlock
+function mapDispatchToProps (dispatch) {
+  return {
+    onHoursChange: (value) => {
+      dispatch(setTimeHours(value))
+    },
+    onMinutesChange: (value) => {
+      dispatch(setTimeMinutes(value))
+    },
+    onSecondsChange: (value) => {
+      dispatch(setTimeSeconds(value))
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SetTime)

@@ -1,12 +1,20 @@
-import React from 'react'
+import { connect } from 'react-redux'
 import SetDistance from 'components/SetDistance/SetDistance'
+import { selectDistance } from 'store/selectors'
+import { setDistanceValue } from 'store/actions/distance'
 
-function DistanceBlock () {
-  return (
-    <SetDistance
-      distance={{value: 3, unit: 'mi'}}
-      onDistanceValueChange={() => true} />
-  )
+function mapStateToProps (state) {
+  return {
+    distance: selectDistance(state)
+  }
 }
 
-export default DistanceBlock
+function mapDispatchToProps (dispatch) {
+  return {
+    onDistanceValueChange: (value) => {
+      dispatch(setDistanceValue(value))
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SetDistance)

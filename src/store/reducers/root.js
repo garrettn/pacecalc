@@ -1,5 +1,8 @@
-const initialState = {}
+import { combineReducers } from 'redux'
+import distance from './distance'
+import time from './time'
 
-export default function rootReducer (state = initialState, action) {
-  return state
-}
+export default combineReducers({
+  distance,
+  time
+})

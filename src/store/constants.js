@@ -1,0 +1,7 @@
+// Distance
+export const SET_DISTANCE_VALUE = 'SET_DISTANCE_VALUE'
+
+// Time
+export const SET_TIME_HOURS = 'SET_TIME_HOURS'
+export const SET_TIME_MINUTES = 'SET_TIME_MINUTES'
+export const SET_TIME_SECONDS = 'SET_TIME_SECONDS'
