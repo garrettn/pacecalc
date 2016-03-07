@@ -9,14 +9,19 @@ function SetTime ({ time, onHoursChange, onMinutesChange, onSecondsChange }) {
       <input
         type='number'
         value={time.hours}
+        min='0'
         onChange={callWithValue(onHoursChange)} />:
       <input
         type='number'
         value={time.minutes}
+        min='0'
+        max='60'
         onChange={callWithValue(onMinutesChange)} />:
       <input
         type='number'
         value={time.seconds}
+        min='0'
+        max='60'
         onChange={callWithValue(onSecondsChange)} />
     </div>
   )

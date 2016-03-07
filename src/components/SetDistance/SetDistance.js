@@ -10,6 +10,7 @@ function SetDistance ({ distance, onDistanceValueChange }) {
         <input
           type='number'
           value={distance.value}
+          min='0'
           onChange={callWithValue(onDistanceValueChange)} />
       </label>
       {' '}
