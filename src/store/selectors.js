@@ -5,3 +5,11 @@ export function selectDistance (state) {
 export function selectTime (state) {
   return state.time
 }
+
+export function calculatePaceString (state) {
+  return '10:00'
+}
+
+export function selectPaceDistanceUnit (state) {
+  return state.pace.distanceUnit
+}

@@ -1,12 +1,15 @@
-import React from 'react'
+import { connect } from 'react-redux'
 import ShowPace from 'components/ShowPace/ShowPace'
+import {
+  calculatePaceString,
+  selectPaceDistanceUnit
+} from 'store/selectors'
 
-function PaceBlock () {
-  return (
-    <ShowPace
-      paceTimeString='10:00'
-      paceDistanceUnit='mi' />
-  )
+function mapStateToProps (state) {
+  return {
+    paceTimeString: calculatePaceString(state),
+    paceDistanceUnit: selectPaceDistanceUnit(state)
+  }
 }
 
-export default PaceBlock
+export default connect(mapStateToProps)(ShowPace)
