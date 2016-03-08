@@ -11,6 +11,7 @@ function SetDistance ({ distance, onDistanceValueChange }) {
           type='number'
           value={distance.value}
           min='0'
+          step='0.1'
           onChange={callWithValue(onDistanceValueChange)} />
       </label>
       {' '}
