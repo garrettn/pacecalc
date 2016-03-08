@@ -42,7 +42,7 @@ function createWebpackConfig () {
     },
 
     output: {
-      filename: '[name].[hash].js',
+      filename: '[name].[chunkhash].js',
       path: path.resolve('dist'),
       pathinfo: !production
     },
