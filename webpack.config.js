@@ -34,10 +34,12 @@ function createWebpackConfig () {
     entry: {
       app: path.resolve('src/main.js'),
       vendor: [
+        'mathjs',
         'react',
         'react-dom',
         'react-redux',
-        'redux'
+        'redux',
+        'simple-zeropad'
       ]
     },
 

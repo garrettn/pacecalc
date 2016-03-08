@@ -1,3 +1,10 @@
+import {
+  calculatePace,
+  renderHoursString,
+  renderMinutesString,
+  renderSecondsString
+} from 'util/pace'
+
 export function selectDistance (state) {
   return state.distance
 }
@@ -7,7 +14,16 @@ export function selectTime (state) {
 }
 
 export function calculatePaceString (state) {
-  return '10:00'
+  const { hours, minutes, seconds } = calculatePace(
+    state.time,
+    state.distance.value,
+    state.distance.unit,
+    state.pace.distanceUnit
+  )
+
+  return renderHoursString(hours) +
+    renderMinutesString(hours, minutes) +
+    renderSecondsString(hours, minutes, seconds)
 }
 
 export function selectPaceDistanceUnit (state) {
