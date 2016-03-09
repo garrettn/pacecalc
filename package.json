@@ -9,7 +9,7 @@
     "compile": "NODE_ENV=production webpack",
     "lint": "standard --verbose | snazzy",
     "start": "webpack-dev-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run lint && karma start --single-run"
   },
   "repository": {
     "type": "git",
@@ -25,11 +25,18 @@
     "babel-preset-react": "^6.5.0",
     "html-webpack-plugin": "ampedandwired/html-webpack-plugin#feature/webpack-2",
     "html-webpack-template": "^4.0.0",
+    "karma": "^0.13.22",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-tap": "^1.0.4",
+    "karma-webpack": "^1.7.0",
+    "phantomjs-prebuilt": "^2.1.5",
     "redux-devtools": "^3.1.1",
     "redux-devtools-dock-monitor": "^1.1.0",
     "redux-devtools-log-monitor": "^1.0.4",
     "snazzy": "^3.0.0",
     "standard": "^6.0.5",
+    "tape": "^4.5.1",
     "webpack": "^2.1.0-beta.4",
     "webpack-dev-server": "^2.0.0-beta"
   },
