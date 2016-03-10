@@ -26,7 +26,7 @@ export function renderMinutesString (hours, minutes) {
 
 export function renderSecondsString (hours, minutes, seconds) {
   if (hours > 0 || minutes > 0) {
-    return zeropad(seconds)
+    return `${zeropad(seconds)}`
   }
 
   return `${seconds} s`

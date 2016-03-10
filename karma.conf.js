@@ -5,13 +5,13 @@ module.exports = function (config) {
     basePath: '',
 
     files: [
-      'test/**/*.test.js'
+      'test/test.index.js'
     ],
 
     frameworks: ['tap'],
 
     preprocessors: {
-      'test/**/*.test.js': ['webpack', 'sourcemap']
+      'test/test.index.js': ['webpack', 'sourcemap']
     },
 
     webpack: {
