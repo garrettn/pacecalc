@@ -21,6 +21,11 @@ module.exports = function (config) {
             test: /\.jsx?$/,
             exclude: /node_modules/,
             loader: 'babel'
+          },
+          {
+            // need this loader for cheerio (depenency of enzyme)
+            test: /\.json$/,
+            loader: 'json'
           }
         ]
       },
@@ -36,7 +41,12 @@ module.exports = function (config) {
         ]
       },
 
-      devtool: 'inline-source-map'
+      devtool: 'inline-source-map',
+
+      externals: {
+        'react/lib/ExecutionEnvironment': true,
+        'react/lib/ReactContext': true
+      }
     },
 
     webpackMiddleware: {
