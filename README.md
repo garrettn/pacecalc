@@ -2,6 +2,7 @@
 
 A simple web app for calculating your running pace.
 
+[![Build Status](https://travis-ci.org/garrettn/pacecalc.svg?branch=master)](https://travis-ci.org/garrettn/pacecalc)
 [![Dependency status](https://img.shields.io/david/garrettn/pacecalc.svg)](https://david-dm.org/garrettn/pacecalc)
 [![devDependency status](https://img.shields.io/david/dev/garrettn/pacecalc.svg)](https://david-dm.org/garrettn/pacecalc#info=devDependencies)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
