@@ -27,7 +27,7 @@
     "babel-preset-react": "^6.5.0",
     "enzyme": "^2.1.0",
     "gh-pages-with-token": "^1.0.0",
-    "html-webpack-plugin": "ampedandwired/html-webpack-plugin#feature/webpack-2",
+    "html-webpack-plugin": "^2.12.0",
     "html-webpack-template": "^4.0.0",
     "json-loader": "^0.5.4",
     "karma": "^0.13.22",
