@@ -12,7 +12,6 @@ function publish (remoteUrl) {
 
   console.log('Starting deployment to GitHub pages')
   ghpages.publish(path.join(__dirname, 'dist'), Object.assign({}, {
-    silent: true,
     repo: repo
   }, user), function (err) {
     if (err) {
