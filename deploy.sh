@@ -8,7 +8,7 @@ if [ "$TRAVIS" = "true" ]
 then
   git config --global user.name "Travis CI"
   git config --global user.email "travis@travis-ci"
-  ORIGIN=https://$GH_TOKEN@$GH_REPO.git
+  ORIGIN=https://$GH_TOKEN@github.com/$GH_REPO.git
 else
   ORIGIN=$(git remote get-url origin) # get-url requires Git >= 2.6.0
 fi
@@ -28,6 +28,6 @@ git commit -m "Deploy build ${BUILD}"
 # repo's gh-pages branch. (All previous history on the gh-pages branch
 # will be lost, since we are overwriting it.) We redirect any output to
 # /dev/null to hide any sensitive credential data that might otherwise be exposed.
-git push --force "${ORIGIN}" master:gh-pages
+git push --force --quiet "${ORIGIN}" master:gh-pages > /dev/null 2>&1
 
 echo "Successfully deployed!"
