@@ -1,0 +1,7 @@
+@import url(~sanitize.css/sanitize.css);
+
+html,
+body,
+#pacecalc {
+  height: 100%;
+}
