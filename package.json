@@ -45,7 +45,7 @@
     "redux-devtools-log-monitor": "^1.0.4",
     "sanitize.css": "^3.3.0",
     "sinon": "^2.0.0-pre",
-    "snazzy": "^3.0.0",
+    "snazzy": "^4.0.0",
     "standard": "^7.0.0",
     "style-loader": "^0.13.1",
     "tape": "^4.5.1",
