@@ -4,12 +4,14 @@ var HtmlPlugin = require('html-webpack-plugin')
 var path = require('path')
 var webpack = require('webpack')
 
-var production = process.env.NODE_ENV === 'production'
+var env = process.env.NODE_ENV || 'development'
+var production = env === 'production'
 
 function getPlugins (production) {
   var basePlugins = [
     new webpack.DefinePlugin({
-      __DEV__: !production
+      __DEV__: !production,
+      'process.env.NODE_ENV': JSON.stringify(env)
     }),
     new ExtractTextPlugin('[name].[contenthash].css'),
     new HtmlPlugin({
