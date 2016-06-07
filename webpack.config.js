@@ -18,7 +18,8 @@ function getPlugins (production) {
       inject: false,
       template: 'node_modules/html-webpack-template/index.ejs',
       appMountId: 'pacecalc',
-      title: 'Pacecalc'
+      title: 'Pacecalc',
+      mobile: true
     }),
     new webpack.optimize.CommonsChunkPlugin({
       names: ['vendor']
