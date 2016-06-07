@@ -35,9 +35,8 @@ module.exports = function (config) {
       },
 
       resolve: {
-        modules: [
-          path.resolve('src'),
-          'node_modules'
+        root: [
+          path.resolve('src')
         ]
       },
 
