@@ -1,0 +1,12 @@
+.inputs {
+  composes: fontLarge from '../../styles/_fonts.css';
+  display: flex;
+  flex-direction: row;
+}
+
+.input {
+  width: 30%;
+  margin: 0 1%;
+  text-align: center;
+  border-bottom: 1px dotted white;
+}

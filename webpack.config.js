@@ -72,15 +72,15 @@ module.exports = {
     loaders: [
       {
         test: /\.css$/,
-        include: [
-          path.resolve(__dirname, 'src/components')
+        exclude: [
+          path.resolve(__dirname, 'src/styles/main.css')
         ],
         loader: ExtractTextPlugin.extract('style-loader', [getCSSLoaderConfig(true, production), 'postcss-loader'])
       },
       {
         test: /\.css$/,
-        exclude: [
-          path.resolve(__dirname, 'src/components')
+        include: [
+          path.resolve(__dirname, 'src/styles/main.css')
         ],
         loader: ExtractTextPlugin.extract('style-loader', [getCSSLoaderConfig(false, production), 'postcss-loader'])
       },

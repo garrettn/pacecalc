@@ -1,21 +1,20 @@
 import React, { PropTypes } from 'react'
 import callWithValue from 'util/callWithValue'
+import styles from './SetDistance.css'
 
 function SetDistance ({ distance, onDistanceValueChange }) {
   return (
     <div>
       <label>
-        Distance:
-        {' '}
+        Distance ({distance.unit})
         <input
           type='number'
           value={distance.value}
           min='0'
           step='0.1'
-          onChange={callWithValue(onDistanceValueChange)} />
+          onChange={callWithValue(onDistanceValueChange)}
+          className={styles.input} />
       </label>
-      {' '}
-      {distance.unit}
     </div>
   )
 }

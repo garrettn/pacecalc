@@ -1,5 +1,8 @@
 .container {
-  border: 2px solid gray;
-  border-radius: 0.25em;
+  max-width: 600px;
   padding: 1em;
+}
+
+.container > div:not(:last-child) {
+  margin-bottom: 1em;
 }

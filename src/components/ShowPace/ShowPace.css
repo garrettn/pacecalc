@@ -1,0 +1,8 @@
+.paceWrapper {
+  composes: fontLarge from '../../styles/_fonts.css';
+  text-align: right;
+}
+
+.paceTime {
+  font-weight: bold;
+}

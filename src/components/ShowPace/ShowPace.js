@@ -1,9 +1,14 @@
 import React, { PropTypes } from 'react'
+import styles from './ShowPace.css'
 
 function ShowPace ({ paceTimeString, paceDistanceUnit }) {
   return (
     <div>
-      Required pace: {paceTimeString} / {paceDistanceUnit}
+      Required pace
+      <div className={styles.paceWrapper}>
+        <span className={styles.paceTime}>{paceTimeString}</span>
+        <span className={styles.paceDistance}> / {paceDistanceUnit}</span>
+      </div>
     </div>
   )
 }

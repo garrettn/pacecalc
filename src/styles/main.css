@@ -5,3 +5,8 @@ body,
 #pacecalc {
   height: 100%;
 }
+
+body {
+  background-color: #0fa207;
+  color: white;
+}
