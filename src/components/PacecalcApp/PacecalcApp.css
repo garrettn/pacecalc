@@ -10,3 +10,11 @@
 .heading {
   margin: 0 0 1.5em;
 }
+
+.sourceLink {
+  text-align: right;
+}
+
+.sourceLink :link {
+  color: white;
+}

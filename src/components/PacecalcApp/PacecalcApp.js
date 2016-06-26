@@ -11,6 +11,9 @@ function PacecalcApp () {
       <DistanceBlock />
       <TimeBlock />
       <PaceBlock />
+      <div className={styles.sourceLink}>
+        <a href='https://github.com/garrettn/pacecalc'>View source</a>
+      </div>
     </div>
   )
 }
