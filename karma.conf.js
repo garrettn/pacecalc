@@ -26,6 +26,10 @@ module.exports = function (config) {
             // need this loader for cheerio (depenency of enzyme)
             test: /\.json$/,
             loader: 'json'
+          },
+          {
+            test: /\.css$/,
+            loader: 'css?modules'
           }
         ]
       },
@@ -43,6 +47,7 @@ module.exports = function (config) {
       devtool: 'inline-source-map',
 
       externals: {
+        'react/addons': true,
         'react/lib/ExecutionEnvironment': true,
         'react/lib/ReactContext': true
       }
