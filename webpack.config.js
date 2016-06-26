@@ -1,5 +1,6 @@
 var autoprefixer = require('autoprefixer')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
+var fontMagician = require('postcss-font-magician')
 var HtmlPlugin = require('html-webpack-plugin')
 var path = require('path')
 var webpack = require('webpack')
@@ -93,7 +94,7 @@ module.exports = {
   },
 
   postcss: function () {
-    return [autoprefixer]
+    return [fontMagician(), autoprefixer]
   },
 
   plugins: getPlugins(production),

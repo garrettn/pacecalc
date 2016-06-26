@@ -7,7 +7,7 @@ import styles from './PacecalcApp.css'
 function PacecalcApp () {
   return (
     <div className={styles.container}>
-      <h1>Find Your Pace</h1>
+      <h1 className={styles.heading}>Find Your Pace</h1>
       <DistanceBlock />
       <TimeBlock />
       <PaceBlock />

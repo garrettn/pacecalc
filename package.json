@@ -38,6 +38,7 @@
     "karma-tap": "^1.0.4",
     "karma-webpack": "^1.7.0",
     "phantomjs-prebuilt": "^2.1.5",
+    "postcss-font-magician": "^1.4.0",
     "postcss-loader": "^0.9.1",
     "react-addons-test-utils": "^15.0.1",
     "redux-devtools": "^3.1.1",
