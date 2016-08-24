@@ -47,7 +47,7 @@
     "sanitize.css": "^4.0.0",
     "sinon": "^2.0.0-pre",
     "snazzy": "^4.0.0",
-    "standard": "^7.0.0",
+    "standard": "^8.0.0",
     "style-loader": "^0.13.1",
     "tape": "^4.5.1",
     "webpack": "^1.13.1",
